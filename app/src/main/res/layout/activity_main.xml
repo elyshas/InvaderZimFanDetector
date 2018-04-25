@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.invaderzimfandetector.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        //INITIAL IMAGE AND TEXT
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/invader_zim_intro3" />
+
+        <TextView
+           style="@style/IntroText"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="Take my quiz or feel my wrath!" />
+
+        <EditText
+            android:id="@+id/userName"
+            style="@style/NameField"
+            android:hint="Your First Name"
+            android:inputType="textCapWords" />
+
+        //1. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/zim_house2" />
+
+        //FIRST QUESTION
+        <TextView
+            android:id="@+id/question1"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="1. What items guard Zim's front yard?" />
+
+        //FIRST QUESTION'S ANSWER OPTIONS
+        <RadioGroup
+            style="@style/RadioGroup" >
+
+            <RadioButton
+                android:id="@+id/q1a1"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton1Clicked"
+                android:text="Puffer fish and gnomes" />
+
+            <RadioButton
+                android:id="@+id/q1a2"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton1Clicked"
+                android:text="Squirrels and gnomes" />
+        </RadioGroup>
+
+        //2. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/gir_food" />
+
+        //SECOND QUESTION
+        <TextView
+            android:id="@+id/question2"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="2. What are GIR's top favorite foods?" />
+
+        //SECOND QUESTION'S ANSWER OPTIONS
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/q2a1"
+                style="@style/Checkboxes"
+                android:layout_marginLeft="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes1Checked"
+                android:text="Pizza" />
+
+            <CheckBox
+                android:id="@+id/q2a2"
+                style="@style/Checkboxes"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes1Checked"
+                android:text="Waffles" />
+
+            <CheckBox
+                android:id="@+id/q2a3"
+                style="@style/Checkboxes"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes1Checked"
+                android:text="Peanuts" />
+
+            <CheckBox
+                android:id="@+id/q2a4"
+                style="@style/Checkboxes"
+                android:layout_marginRight="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes1Checked"
+                android:text="Tacos" />
+
+        </LinearLayout>
+
+        //3. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/zim_friend" />
+
+        //THIRD QUESTION
+        <TextView
+            android:id="@+id/question3"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="3. What is the name of Zim's fake bestfriend?" />
+
+        //THIRD QUESTION'S ANSWER OPTIONS
+        <RadioGroup
+            style="@style/RadioGroup" >
+
+            <RadioButton
+                android:id="@+id/q3a1"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton2Clicked"
+                android:text="Larry" />
+
+            <RadioButton
+                android:id="@+id/q3a2"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton2Clicked"
+                android:text="Keef" />
+
+            <RadioButton
+                android:id="@+id/q3a3"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton2Clicked"
+                android:text="Garry" />
+
+        </RadioGroup>
+
+        //4. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/gaz" />
+
+        //FORTH QUESTION
+        <TextView
+            android:id="@+id/question4"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="4. What does Gaz enjoy?" />
+
+        //FORTH QUESTION'S ANSWER OPTIONS
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/q4a1"
+                style="@style/Checkboxes"
+                android:layout_marginLeft="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes2Checked"
+                android:text="Video Games" />
+
+            <CheckBox
+                android:id="@+id/q4a2"
+                style="@style/Checkboxes"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes2Checked"
+                android:text="Building robots" />
+
+            <CheckBox
+                android:id="@+id/q4a3"
+                style="@style/Checkboxes"
+                android:layout_marginRight="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes2Checked"
+                android:text="Insulting Dib" />
+
+        </LinearLayout>
+
+        //5. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/zitboy" />
+
+        //FIFTH QUESTION
+        <TextView
+            android:id="@+id/question5"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="5. What does Zim officially name his humongous zit?" />
+
+        //FIFTH QUESTION'S ANSWER OPTIONS
+        <RadioGroup
+            style="@style/RadioGroup" >
+
+            <RadioButton
+                android:id="@+id/q5a1"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton3Clicked"
+                android:text="Walton Chunky" />
+
+            <RadioButton
+                android:id="@+id/q5a2"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton3Clicked"
+                android:text="Pustulio" />
+
+            <RadioButton
+                android:id="@+id/q5a3"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton3Clicked"
+                android:text="Zitboy" />
+        </RadioGroup>
+
+        //6. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/gir_singing" />
+
+        //SIXTH QUESTION
+        <TextView
+            android:id="@+id/question6"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="6. What are GIR's best songs?" />
+
+        //SIXTH QUESTION'S ANSWER OPTIONS
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/q6a1"
+                style="@style/Checkboxes"
+                android:layout_marginLeft="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes3Checked"
+                android:text="Squirrelzee" />
+
+            <CheckBox
+                android:id="@+id/q6a2"
+                style="@style/Checkboxes"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes3Checked"
+                android:text="Merry Jingly" />
+
+            <CheckBox
+                android:id="@+id/q6a3"
+                style="@style/Checkboxes"
+                android:layout_marginRight="4dp"
+                android:buttonTint="#4CAF50"
+                android:onClick="onCheckboxes3Checked"
+                android:text="The Doom Song" />
+
+        </LinearLayout>
+
+        //7. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION
+        <TextView
+            style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            app:civ_border_width="4dp"
+            app:civ_border_color="#4CAF50"
+            android:src="@drawable/zim_career" />
+
+        //SEVENTH QUESTION
+        <TextView
+            android:id="@+id/question7"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="7. Where did Zim have to work on Career Day?" />
+
+        //SEVENTH QUESTION'S ANSWER OPTIONS
+        <RadioGroup
+            style="@style/RadioGroup" >
+
+            <RadioButton
+                android:id="@+id/q7a1"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton4Clicked"
+                android:text="Burger Slave" />
+
+            <RadioButton
+                android:id="@+id/q7a2"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton4Clicked"
+                android:text="McBunsALot" />
+
+            <RadioButton
+                android:id="@+id/q7a3"
+                style="@style/RadioButtons"
+                android:buttonTint="#4CAF50"
+                android:onClick="onRadioButton4Clicked"
+                android:text="McMeaties" />
+
+        </RadioGroup>
+
+        //PADDING BETWEEN QUESTION AND BUTTON
+        <TextView
+            style="@style/DividerLine" />
+
+        //SUBMIT BUTTON
+        <Button
+            style="@style/SubmitButton"
+            android:onClick="displayScore"
+            android:text="Ready for DOOM?" />
+
+    </LinearLayout>
+
+</ScrollView>

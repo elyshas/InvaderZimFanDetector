@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base APPLICATION THEME: mainly for customized app bar and checkboxes/buttons. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
+    <!-- Quiz question's CIRCLE IMAGES customized here. -->
+    <style name="CircleImage" >
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- INTRO QUIZ TEXT customized here. -->
+    <style name="IntroText" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">#4CAF50</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- NAME FIELD customized here. -->
+    <style name="NameField" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- Quiz DIVIDER LINES customized here. -->
+    <style name="DividerLine" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:background">#AB47BC</item>
+        <item name="android:textSize">2sp</item>
+    </style>
+
+    <!-- Quiz QUESTION's TEXT customized here. -->
+    <style name="Questions" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textColor">#FF4081</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- RADIO GROUP styles customized here. -->
+    <style name="RadioGroup" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- RADIO BUTTON general styles are customized here. -->
+    <style name="RadioButtons" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- CHECKBOXES general styles are customized here. -->
+    <style name="Checkboxes" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Quiz's SUBMIT BUTTON is customized here. -->
+    <style name="SubmitButton" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:background">#4CAF50</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+</resources>
+
+<!--<item name=""></item>-->
