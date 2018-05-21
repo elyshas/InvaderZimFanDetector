@@ -17,10 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/invader_zim_intro3" />
+            android:src="@drawable/invader_zim_intro_landscape" />
 
         <TextView
-            style="@style/IntroText"
+            style="@style/IntroText_Land"
             android:fontFamily="sans-serif-condensed"
             android:text="@string/Intro" />
 

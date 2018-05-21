@@ -17,18 +17,38 @@ public class MainActivity extends AppCompatActivity {
     /***Calculates final score***/
     int totalScore = 0;
 
+    /**Saving score for rotation**/
+    static final String GAME_SCORE = "gameScore";
+
     /***Referencing XML and linking***/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Attempting to save score upon rotation and oncreate
+        if (savedInstanceState != null) {
+            totalScore = savedInstanceState.getInt(GAME_SCORE);
+            // Else, start at 0
+        } else {
+            totalScore = 0;
+        }
+
+    }
+
+    // Calling on the label and adding the int value for user answers (which was created at the top).
+    /** Saving instance for when rotating between portrait and landscape **/
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(GAME_SCORE, totalScore);
+        // Call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     /*** Question 1 - Zim's house decor - radio buttons***/
     public void onRadioButton1Clicked(View view) {
         // Is the Q1 button now checked?
         boolean button1Checked = ((RadioButton) view).isChecked();
-        // Check which boxes are checked and add/subtract points when appropriate
+        // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q1a1:
                 if (button1Checked)
@@ -46,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCheckboxes1Checked(View view) {
         // Is the Q2 checkboxes checked?
         boolean checkboxes1Checked = ((CheckBox) view).isChecked();
-        // Check which boxes are checked and add/subtract points when appropriate
+        // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q2a1:
                 if (checkboxes1Checked)
@@ -61,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q2a3:
                 if (checkboxes1Checked)
                     // peanuts
-                    totalScore = totalScore - 1;
+//                    totalScore = totalScore - 1;
                 break;
             case R.id.q2a4:
                 if (checkboxes1Checked)
@@ -97,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCheckboxes2Checked(View view) {
         // Is the Q4 checkboxes checked?
         boolean checkboxes2Checked = ((CheckBox) view).isChecked();
-        // Check which boxes are checked and add/subtract points when appropriate
+        // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q4a1:
                 if (checkboxes2Checked)
@@ -107,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q4a2:
                 if (checkboxes2Checked)
                     // Building robots
-                    totalScore = totalScore - 1;
+//                    totalScore = totalScore - 1;
                 break;
             case R.id.q4a3:
                 if (checkboxes2Checked)
@@ -143,12 +163,12 @@ public class MainActivity extends AppCompatActivity {
     public void onCheckboxes3Checked(View view) {
         // Is the Q6 checkboxes checked?
         boolean checkboxes3Checked = ((CheckBox) view).isChecked();
-        // Check which boxes are checked and add/subtract points when appropriate
+        // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q6a1:
                 if (checkboxes3Checked)
                     // Squirrel Antics
-                    totalScore = totalScore - 1;
+//                    totalScore = totalScore - 1;
                 break;
             case R.id.q6a2:
                 if (checkboxes3Checked)

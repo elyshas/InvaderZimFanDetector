@@ -1,3 +1,44 @@
 <resources>
+    <!--App Name and Intro Text-->
     <string name="app_name">Invader Zim Fan Detector</string>
+    <string name="Intro">Take my quiz or feel my wrath!</string>
+
+    <!--Question 1-->
+    <string name="Question1">1. What items guard Zim\'s front yard?</string>
+    <string name="Q1_Answer1">Puffer fish and gnomes</string>
+    <string name="Q1_Answer2">Squirrels and gnomes</string>
+    <!--Question 2-->
+    <string name="Question2">2. What are GIR\'s top favorite foods?</string>
+    <string name="Q2_Answer1">Pizza</string>
+    <string name="Q2_Answer2">Waffles</string>
+    <string name="Q2_Answer3">Peanuts</string>
+    <string name="Q2_Answer4">Tacos</string>
+    <!--Question 3-->
+    <string name="Question3">3. What is the name of Zim\'s fake bestfriend?</string>
+    <string name="Q3_Answer1">Larry</string>
+    <string name="Q3_Answer2">Keef</string>
+    <string name="Q3_Answer3">Garry</string>
+    <!--Question 4-->
+    <string name="Question4">4. What does Gaz enjoy?</string>
+    <string name="Q4_Answer1">Video Games</string>
+    <string name="Q4_Answer2">Building robots</string>
+    <string name="Q4_Answer3">Insulting Dib</string>
+    <!--Question 5-->
+    <string name="Question5">5. What does Zim officially name his humongous zit?</string>
+    <string name="Q5_Answer1">Walton Chunky</string>
+    <string name="Q5_Answer2">Pustulio</string>
+    <string name="Q5_Answer3">Zitboy</string>
+    <!--Question 6-->
+    <string name="Question6">6. What are GIR\'s best songs?</string>
+    <string name="Q6_Answer1">Squirrelzee</string>
+    <string name="Q6_Answer2">Merry Jingly</string>
+    <string name="Q6_Answer3">The Doom Song</string>
+    <!--Question 7-->
+    <string name="Question7">7. Where did Zim have to work on Career Day?</string>
+    <string name="Q7_Answer1">Burger Slave</string>
+    <string name="Q7_Answer2">McBunsALot</string>
+    <string name="Q7_Answer3">McMeaties</string>
+
+    <!--Submit Button-->
+    <string name="SubmitButton">Ready For Doom?</string>
 </resources>

@@ -1,18 +1,11 @@
 <resources>
+<!--*****General Layout and Portrait Layout*****-->
 
     <!-- Base APPLICATION THEME: mainly for customized app bar and checkboxes/buttons. -->
     <style name="AppTheme" parent="Theme.AppCompat">
-        <item name="colorPrimary">#4CAF50</item>
-        <item name="colorPrimaryDark">#388E3C</item>
-        <item name="colorAccent">#FF4081</item>
-    </style>
-
-    <!-- Quiz question's CIRCLE IMAGES customized here. -->
-    <style name="CircleImage" >
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="colorPrimary">@color/BrightGreen</item>
+        <item name="colorPrimaryDark">@color/DarkGreen</item>
+        <item name="colorAccent">@color/BrightPink</item>
     </style>
 
     <!-- INTRO QUIZ TEXT customized here. -->
@@ -22,9 +15,19 @@
         <item name="android:gravity">center</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:background">#4CAF50</item>
-        <item name="android:textColor">#FFF</item>
+        <item name="android:background">@color/BrightGreen</item>
+        <item name="android:textColor">@color/White</item>
         <item name="android:textSize">22sp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
+
+    <!-- Quiz question's CIRCLE IMAGES customized here. -->
+    <style name="CircleImage" >
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
     </style>
 
     <!-- NAME FIELD customized here. -->
@@ -41,7 +44,7 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">15dp</item>
-        <item name="android:background">#AB47BC</item>
+        <item name="android:background">@color/Purple</item>
         <item name="android:textSize">2sp</item>
     </style>
 
@@ -52,7 +55,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">15dp</item>
-        <item name="android:textColor">#FF4081</item>
+        <item name="android:textColor">@color/BrightPink</item>
         <item name="android:textSize">20sp</item>
     </style>
 
@@ -85,11 +88,26 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_margin">15dp</item>
-        <item name="android:background">#4CAF50</item>
+        <!--<item name="android:background">@color/BrightGreen</item>-->
         <item name="android:padding">10dp</item>
-        <item name="android:textColor">#FFF</item>
+        <item name="android:textColor">@color/White</item>
     </style>
 
+<!--*****Landscape Layout*****-->
+
+    <!-- INTRO QUIZ TEXT customized here. -->
+    <style name="IntroText_Land" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/BrightGreen</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+    </style>
 </resources>
 
 <!--<item name=""></item>-->
