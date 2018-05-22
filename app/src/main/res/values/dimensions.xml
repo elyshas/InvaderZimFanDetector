@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Portrait and LandScape Main Items-->
+    <dimen name="Margin15dp">15dp</dimen>
+    <dimen name="CircleImageRadius">150dp</dimen>
+    <dimen name="CircleImageBorder">4dp</dimen>
+    <dimen name="DividerLineHeight">2dp</dimen>
+    <dimen name="QuestionText">20sp</dimen>
+    <dimen name="SubmitPadding">10dp</dimen>
+
+    <!--Portrait Intro text-->
+    <dimen name="IntroText">22sp</dimen>
+    <dimen name="IntoPadding">15dp</dimen>
+
+    <!--Portrait Answers' Margins-->
+    <dimen name="Q1_L_Margin">6dp</dimen>
+    <dimen name="Q1_R_Margin">8dp</dimen>
+    <dimen name="Q2_L_Margin">12dp</dimen>
+    <dimen name="Q2_R_Margin">14dp</dimen>
+    <dimen name="Q3_L_Margin">60dp</dimen>
+    <dimen name="Q3_R_Margin">62dp</dimen>
+    <dimen name="Q4_R_Margin">3dp</dimen>
+    <dimen name="Q5_L_Margin">25dp</dimen>
+    <dimen name="Q5_R_Margin">27dp</dimen>
+    <dimen name="Q6_L_Margin">6dp</dimen>
+    <dimen name="Q6_R_Margin">8dp</dimen>
+    <dimen name="Q7_L_Margin">10dp</dimen>
+    <dimen name="Q7_R_Margin">12dp</dimen>
+
+    <!--Landscape Intro text-->
+    <dimen name="IntroText_Land">28sp</dimen>
+    <dimen name="IntoPadding_Land">20dp</dimen>
+
+    <!--Landscape Answers' Margins-->
+    <dimen name="Q1_Margins_Land">95dp</dimen>
+    <dimen name="Q2_Margins_Land">80dp</dimen>
+    <dimen name="Q3_Margins_Land">130dp</dimen>
+    <dimen name="Q4_L_Margin_Land">65dp</dimen>
+    <dimen name="Q4_R_Margin_Land">68dp</dimen>
+    <dimen name="Q5_Margins_Land">95dp</dimen>
+    <dimen name="Q6_Margins_Land">65dp</dimen>
+    <dimen name="Q7_Margins_Land">75dp</dimen>
+</resources>

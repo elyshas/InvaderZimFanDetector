@@ -11,7 +11,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //***Calculates final score***
-    int totalScore = 0;
+    int totalScore;
+
+    //***+1 for correct answers***
+    private static final int CorrectAnswer = 1;
 
     //***Saving score for rotation***
     static final String GAME_SCORE = "gameScore";
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q1a1:
                 if (button1Checked)
                     // Puffer fish and gnomes
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q1a2:
                 if (button1Checked)
@@ -69,22 +72,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q2a1:
                 if (checkboxes1Checked)
                     // pizza
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q2a2:
                 if (checkboxes1Checked)
                     // waffles
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q2a3:
                 if (checkboxes1Checked)
                     // peanuts
-//                    totalScore = totalScore - 1;
                     break;
             case R.id.q2a4:
                 if (checkboxes1Checked)
                     // tacos
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
         }
     }
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q3a2:
                 if (button2Checked)
                     // Keef
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q3a3:
                 if (button2Checked)
@@ -120,17 +122,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q4a1:
                 if (checkboxes2Checked)
                     // Video Games
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q4a2:
                 if (checkboxes2Checked)
                     // Building robots
-//                    totalScore = totalScore - 1;
                     break;
             case R.id.q4a3:
                 if (checkboxes2Checked)
                     // Insulting Dib
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
         }
     }
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q5a2:
                 if (button3Checked)
                     // Pustulio
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q5a3:
                 if (button3Checked)
@@ -166,17 +167,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q6a1:
                 if (checkboxes3Checked)
                     // Squirrel Antics
-//                    totalScore = totalScore - 1;
                     break;
             case R.id.q6a2:
                 if (checkboxes3Checked)
                     // The Doom Song
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
             case R.id.q6a3:
                 if (checkboxes3Checked)
                     // Merry Jingly
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
         }
     }
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q7a3:
                 if (button4Checked)
                     // McMeaties
-                    totalScore = totalScore + 1;
+                    totalScore += CorrectAnswer;
                 break;
         }
     }

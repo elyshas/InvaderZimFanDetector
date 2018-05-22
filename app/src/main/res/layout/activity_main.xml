@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--All images were taken from Google, under searches Invader Zim- I do not own any right to these images -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -37,7 +38,7 @@
             style="@style/CircleImage"
             android:src="@drawable/zim_house2"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--FIRST QUESTION-->
         <TextView
@@ -49,8 +50,8 @@
         <!--FIRST QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="8dp">
+            android:layout_marginLeft="@dimen/Q1_L_Margin"
+            android:layout_marginRight="@dimen/Q1_R_Margin">
 
             <RadioButton
                 android:id="@+id/q1a1"
@@ -74,7 +75,7 @@
             style="@style/CircleImage"
             android:src="@drawable/gir_food"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--SECOND QUESTION-->
         <TextView
@@ -87,8 +88,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="14dp"
+            android:layout_marginLeft="@dimen/Q2_L_Margin"
+            android:layout_marginRight="@dimen/Q2_R_Margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -128,7 +129,7 @@
             style="@style/CircleImage"
             android:src="@drawable/zim_friend"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--THIRD QUESTION-->
         <TextView
@@ -140,8 +141,8 @@
         <!--THIRD QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="62dp">
+            android:layout_marginLeft="@dimen/Q3_L_Margin"
+            android:layout_marginRight="@dimen/Q3_R_Margin">
 
             <RadioButton
                 android:id="@+id/q3a1"
@@ -173,7 +174,7 @@
             style="@style/CircleImage"
             android:src="@drawable/gaz"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--FORTH QUESTION-->
         <TextView
@@ -186,7 +187,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="3dp"
+            android:layout_marginRight="@dimen/Q4_R_Margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -219,7 +220,7 @@
             style="@style/CircleImage"
             android:src="@drawable/zitboy"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--FIFTH QUESTION-->
         <TextView
@@ -231,8 +232,8 @@
         <!--FIFTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="27dp">
+            android:layout_marginLeft="@dimen/Q5_L_Margin"
+            android:layout_marginRight="@dimen/Q5_R_Margin">
 
             <RadioButton
                 android:id="@+id/q5a1"
@@ -263,7 +264,7 @@
             style="@style/CircleImage"
             android:src="@drawable/gir_singing"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--SIXTH QUESTION-->
         <TextView
@@ -276,8 +277,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginLeft="@dimen/Q6_L_Margin"
+            android:layout_marginRight="@dimen/Q6_R_Margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -310,7 +311,7 @@
             style="@style/CircleImage"
             android:src="@drawable/zim_career"
             app:civ_border_color="@color/BrightGreen"
-            app:civ_border_width="4dp" />
+            app:civ_border_width="@dimen/CircleImageBorder" />
 
         <!--SEVENTH QUESTION-->
         <TextView
@@ -322,8 +323,8 @@
         <!--SEVENTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="12dp">
+            android:layout_marginLeft="@dimen/Q7_L_Margin"
+            android:layout_marginRight="@dimen/Q7_R_Margin">
 
             <RadioButton
                 android:id="@+id/q7a1"

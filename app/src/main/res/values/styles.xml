@@ -17,24 +17,24 @@
         <item name="android:textStyle">bold</item>
         <item name="android:background">@color/BrightGreen</item>
         <item name="android:textColor">@color/White</item>
-        <item name="android:textSize">22sp</item>
-        <item name="android:paddingTop">15dp</item>
-        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textSize">@dimen/IntroText</item>
+        <item name="android:paddingTop">@dimen/IntoPadding</item>
+        <item name="android:paddingBottom">@dimen/IntoPadding</item>
     </style>
 
     <!-- Quiz question's CIRCLE IMAGES customized here. -->
     <style name="CircleImage">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_width">@dimen/CircleImageRadius</item>
+        <item name="android:layout_height">@dimen/CircleImageRadius</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">@dimen/Margin15dp</item>
     </style>
 
     <!-- Quiz DIVIDER LINES customized here. -->
     <style name="DividerLine">
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">2dp</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_height">@dimen/DividerLineHeight</item>
+        <item name="android:layout_marginTop">@dimen/Margin15dp</item>
         <item name="android:background">@color/Purple</item>
     </style>
 
@@ -44,7 +44,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">@dimen/Margin15dp</item>
     </style>
 
     <!-- Quiz QUESTION's TEXT customized here. -->
@@ -53,9 +53,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_margin">@dimen/Margin15dp</item>
         <item name="android:textColor">@color/BrightPink</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/QuestionText</item>
     </style>
 
     <!-- RADIO GROUP styles customized here. -->
@@ -86,9 +86,8 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_margin">15dp</item>
-        <!--<item name="android:background">@color/BrightGreen</item>-->
-        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">@dimen/Margin15dp</item>
+        <item name="android:padding">@dimen/SubmitPadding</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
@@ -103,10 +102,8 @@
         <item name="android:textStyle">bold</item>
         <item name="android:background">@color/BrightGreen</item>
         <item name="android:textColor">@color/White</item>
-        <item name="android:textSize">28sp</item>
-        <item name="android:paddingTop">20dp</item>
-        <item name="android:paddingBottom">20dp</item>
+        <item name="android:textSize">@dimen/IntroText_Land</item>
+        <item name="android:paddingTop">@dimen/IntoPadding_Land</item>
+        <item name="android:paddingBottom">@dimen/IntoPadding_Land</item>
     </style>
 </resources>
-
-    <!--<item name=""></item>-->
