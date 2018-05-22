@@ -1,30 +1,27 @@
 package com.example.android.invaderzimfandetector;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /***Calculates final score***/
+    //***Calculates final score***
     int totalScore = 0;
 
-    /**Saving score for rotation**/
+    //***Saving score for rotation***
     static final String GAME_SCORE = "gameScore";
 
-    /***Referencing XML and linking***/
+    //***Referencing XML and linking***
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Attempting to save score upon rotation and oncreate
         if (savedInstanceState != null) {
             totalScore = savedInstanceState.getInt(GAME_SCORE);
@@ -36,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Calling on the label and adding the int value for user answers (which was created at the top).
-    /** Saving instance for when rotating between portrait and landscape **/
+
+    //*** Saving instance for when rotating between portrait and landscape***
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt(GAME_SCORE, totalScore);
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
     }
 
-    /*** Question 1 - Zim's house decor - radio buttons***/
+    //*** Question 1 - Zim's house decor - radio buttons***
     public void onRadioButton1Clicked(View view) {
         // Is the Q1 button now checked?
         boolean button1Checked = ((RadioButton) view).isChecked();
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*** Question 2 - GIR favorite food - checkboxes***/
+    //*** Question 2 - GIR favorite food - checkboxes***
     public void onCheckboxes1Checked(View view) {
         // Is the Q2 checkboxes checked?
         boolean checkboxes1Checked = ((CheckBox) view).isChecked();
@@ -82,16 +80,16 @@ public class MainActivity extends AppCompatActivity {
                 if (checkboxes1Checked)
                     // peanuts
 //                    totalScore = totalScore - 1;
-                break;
+                    break;
             case R.id.q2a4:
                 if (checkboxes1Checked)
                     // tacos
                     totalScore = totalScore + 1;
-                    break;
+                break;
         }
     }
 
-    /*** Question 3 - Zim's fake best friend - radio buttons***/
+    //*** Question 3 - Zim's fake best friend - radio buttons***
     public void onRadioButton2Clicked(View view) {
         // Is the Q3 button now checked?
         boolean button2Checked = ((RadioButton) view).isChecked();
@@ -113,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*** Question 4 - Gaz's favorite things - checkboxes***/
+    //*** Question 4 - Gaz's favorite things - checkboxes***
     public void onCheckboxes2Checked(View view) {
         // Is the Q4 checkboxes checked?
         boolean checkboxes2Checked = ((CheckBox) view).isChecked();
@@ -128,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 if (checkboxes2Checked)
                     // Building robots
 //                    totalScore = totalScore - 1;
-                break;
+                    break;
             case R.id.q4a3:
                 if (checkboxes2Checked)
                     // Insulting Dib
@@ -137,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*** Question 5 - Name of Zim's zit - radio buttons***/
+    //*** Question 5 - Name of Zim's zit - radio buttons***
     public void onRadioButton3Clicked(View view) {
         // Is the Q1 button now checked?
         boolean button3Checked = ((RadioButton) view).isChecked();
@@ -155,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q5a3:
                 if (button3Checked)
                     // Zitboy
-                break;
+                    break;
         }
     }
 
-    /*** Question 6 - GIR's best songs - checkboxes***/
+    //*** Question 6 - GIR's best songs - checkboxes***
     public void onCheckboxes3Checked(View view) {
         // Is the Q6 checkboxes checked?
         boolean checkboxes3Checked = ((CheckBox) view).isChecked();
@@ -169,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 if (checkboxes3Checked)
                     // Squirrel Antics
 //                    totalScore = totalScore - 1;
-                break;
+                    break;
             case R.id.q6a2:
                 if (checkboxes3Checked)
                     // The Doom Song
@@ -183,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*** Question 7 - Zim's horrible career day - radio buttons***/
+    //*** Question 7 - Zim's horrible career day - radio buttons***
     public void onRadioButton4Clicked(View view) {
         // Is the Q7 button now checked?
         boolean button4Checked = ((RadioButton) view).isChecked();
@@ -196,26 +194,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q7a2:
                 if (button4Checked)
                     // McBunsALot
-                break;
+                    break;
             case R.id.q7a3:
                 if (button4Checked)
                     // McMeaties
                     totalScore = totalScore + 1;
-                    break;
+                break;
         }
     }
 
-    /***Calculate user total score and display proper response based on their score***/
+    //***Calculate user total score and display proper response based on their score***
     public void displayScore(View view) {
         EditText userName = (EditText) findViewById(R.id.userName);
         String name = userName.getText().toString();
-        if (totalScore >= 8) {
-            Toast.makeText(this, "Congratulations " + name + ", I'll let you live... for now!", Toast.LENGTH_LONG).show();
+        if (totalScore >= 7) {
+            Toast.makeText(this, "Congratulations " + name + ", I'll let you live... FOR NOW!", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Stupid " + name + ", you must now suffer my wrath of DOOM!", Toast.LENGTH_LONG).show();
         }
 
-        /***Resetting all quiz and entry questions after submit button is selected***/
+        //***Resetting all quiz questions after submit button is selected***
         //Resetting RadioButtons
         //QUESTION 1
         RadioButton radioButton1 = (RadioButton) findViewById(R.id.q1a1);

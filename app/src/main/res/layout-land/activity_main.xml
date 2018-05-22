@@ -27,18 +27,17 @@
         <EditText
             android:id="@+id/userName"
             style="@style/NameField"
-            android:hint="Your First Name"
+            android:hint="@string/EditTextHint"
             android:inputType="textCapWords" />
 
         <!--1. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/zim_house2"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/zim_house2" />
+            app:civ_border_width="4dp" />
 
         <!--FIRST QUESTION-->
         <TextView
@@ -49,7 +48,9 @@
 
         <!--FIRST QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
-            style="@style/RadioGroup" >
+            style="@style/RadioGroup"
+            android:layout_marginLeft="82dp"
+            android:layout_marginRight="82dp">
 
             <RadioButton
                 android:id="@+id/q1a1"
@@ -67,14 +68,13 @@
         </RadioGroup>
 
         <!--2. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/gir_food"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/gir_food" />
+            app:civ_border_width="4dp" />
 
         <!--SECOND QUESTION-->
         <TextView
@@ -87,12 +87,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="47dp"
             android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/q2a1"
                 style="@style/Checkboxes"
-                android:layout_marginLeft="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer1" />
@@ -114,7 +115,6 @@
             <CheckBox
                 android:id="@+id/q2a4"
                 style="@style/Checkboxes"
-                android:layout_marginRight="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer4" />
@@ -122,14 +122,13 @@
         </LinearLayout>
 
         <!--3. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/zim_friend"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/zim_friend" />
+            app:civ_border_width="4dp" />
 
         <!--THIRD QUESTION-->
         <TextView
@@ -140,7 +139,9 @@
 
         <!--THIRD QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
-            style="@style/RadioGroup" >
+            style="@style/RadioGroup"
+            android:layout_marginLeft="92dp"
+            android:layout_marginRight="92dp">
 
             <RadioButton
                 android:id="@+id/q3a1"
@@ -166,14 +167,13 @@
         </RadioGroup>
 
         <!--4. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/gaz"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/gaz" />
+            app:civ_border_width="4dp" />
 
         <!--FORTH QUESTION-->
         <TextView
@@ -186,12 +186,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="48dp"
             android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/q4a1"
                 style="@style/Checkboxes"
-                android:layout_marginLeft="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes2Checked"
                 android:text="@string/Q4_Answer1" />
@@ -206,7 +207,6 @@
             <CheckBox
                 android:id="@+id/q4a3"
                 style="@style/Checkboxes"
-                android:layout_marginRight="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes2Checked"
                 android:text="@string/Q4_Answer3" />
@@ -214,14 +214,13 @@
         </LinearLayout>
 
         <!--5. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/zitboy"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/zitboy" />
+            app:civ_border_width="4dp" />
 
         <!--FIFTH QUESTION-->
         <TextView
@@ -232,7 +231,9 @@
 
         <!--FIFTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
-            style="@style/RadioGroup" >
+            style="@style/RadioGroup"
+            android:layout_marginLeft="82dp"
+            android:layout_marginRight="82dp">
 
             <RadioButton
                 android:id="@+id/q5a1"
@@ -257,14 +258,13 @@
         </RadioGroup>
 
         <!--6. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/gir_singing"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/gir_singing" />
+            app:civ_border_width="4dp" />
 
         <!--SIXTH QUESTION-->
         <TextView
@@ -277,12 +277,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="47dp"
             android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/q6a1"
                 style="@style/Checkboxes"
-                android:layout_marginLeft="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes3Checked"
                 android:text="@string/Q6_Answer1" />
@@ -297,7 +298,6 @@
             <CheckBox
                 android:id="@+id/q6a3"
                 style="@style/Checkboxes"
-                android:layout_marginRight="4dp"
                 android:buttonTint="@color/BrightGreen"
                 android:onClick="onCheckboxes3Checked"
                 android:text="@string/Q6_Answer3" />
@@ -305,14 +305,13 @@
         </LinearLayout>
 
         <!--7. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             style="@style/CircleImage"
-            app:civ_border_width="4dp"
+            android:src="@drawable/zim_career"
             app:civ_border_color="@color/BrightGreen"
-            android:src="@drawable/zim_career" />
+            app:civ_border_width="4dp" />
 
         <!--SEVENTH QUESTION-->
         <TextView
@@ -323,7 +322,9 @@
 
         <!--SEVENTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
-            style="@style/RadioGroup" >
+            style="@style/RadioGroup"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="52dp">
 
             <RadioButton
                 android:id="@+id/q7a1"
@@ -349,8 +350,7 @@
         </RadioGroup>
 
         <!--PADDING BETWEEN QUESTION AND BUTTON-->
-        <TextView
-            style="@style/DividerLine" />
+        <View style="@style/DividerLine" />
 
         <!--SUBMIT BUTTON-->
         <Button
