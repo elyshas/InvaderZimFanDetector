@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q2a3:
                 if (checkboxes1Checked)
                     // peanuts
+                    totalScore -= CorrectAnswer;
                     break;
             case R.id.q2a4:
                 if (checkboxes1Checked)
@@ -127,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q4a2:
                 if (checkboxes2Checked)
                     // Building robots
+                    totalScore -= CorrectAnswer;
                     break;
             case R.id.q4a3:
                 if (checkboxes2Checked)
@@ -167,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q6a1:
                 if (checkboxes3Checked)
                     // Squirrel Antics
+                    totalScore -= CorrectAnswer;
                     break;
             case R.id.q6a2:
                 if (checkboxes3Checked)
@@ -203,14 +206,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+//    //*** Question 8 - Irken Rulers - EditText question***
+//    public void answer8Completed (View view) {
+//        // Is the Q8 answered?
+//
+//        // Check answer
+//
+//        // correct answer
+//
+//        //incorrect answer (if needed)
+//    }
+
     //***Calculate user total score and display proper response based on their score***
     public void displayScore(View view) {
         EditText userName = (EditText) findViewById(R.id.userName);
         String name = userName.getText().toString();
-        if (totalScore >= 8) {
+        if (totalScore >= 9) {
             Toast.makeText(this, "Congratulations " + name + ", I'll let you live... FOR NOW!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Your acceptable score was: " + totalScore, Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Stupid " + name + ", you must now suffer my wrath of DOOM!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Your pitiful score was: " + totalScore, Toast.LENGTH_LONG).show();
         }
 
         //***Resetting all quiz questions after submit button is selected***
