@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
 
         <!--INITIAL IMAGE AND TEXT-->
         <ImageView
@@ -29,7 +30,8 @@
             android:id="@+id/userName"
             style="@style/NameField"
             android:hint="@string/EditTextHint"
-            android:inputType="textCapWords" />
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone" />
 
         <!--1. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
         <View style="@style/DividerLine" />
@@ -348,6 +350,30 @@
                 android:text="@string/Q7_Answer3" />
 
         </RadioGroup>
+
+        <!--8. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
+        <View style="@style/DividerLine" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            style="@style/CircleImage"
+            android:src="@drawable/invader_zim_icon_png"
+            app:civ_border_color="@color/BrightGreen"
+            app:civ_border_width="@dimen/CircleImageBorder" />
+
+        <!--EIGHTH QUESTION-->
+        <TextView
+            android:id="@+id/question8"
+            style="@style/Questions"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/Question8" />
+
+        <!--EIGHTH QUESTION'S ANSWER EditText field-->
+        <EditText
+            android:id="@+id/answer8"
+            style="@style/EditTextField"
+            android:hint="@string/Answer8Hint"
+            android:inputType="number"
+            android:imeOptions="actionDone" />
 
         <!--PADDING BETWEEN QUESTION AND BUTTON-->
         <View style="@style/DividerLine" />

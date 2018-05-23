@@ -2,6 +2,7 @@
 <resources>
     <!--Portrait and LandScape Main Items-->
     <dimen name="Margin15dp">15dp</dimen>
+    <dimen name="Margin20dp">20dp</dimen>
     <dimen name="CircleImageRadius">150dp</dimen>
     <dimen name="CircleImageBorder">4dp</dimen>
     <dimen name="DividerLineHeight">2dp</dimen>

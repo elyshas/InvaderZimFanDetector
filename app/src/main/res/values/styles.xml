@@ -81,12 +81,20 @@
         <item name="android:layout_weight">1</item>
     </style>
 
+    <!-- EDITTEXT QUESTION 8 customized here. -->
+    <style name="EditTextField">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
     <!-- Quiz's SUBMIT BUTTON is customized here. -->
     <style name="SubmitButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_margin">@dimen/Margin15dp</item>
+        <item name="android:layout_margin">@dimen/Margin20dp</item>
         <item name="android:padding">@dimen/SubmitPadding</item>
         <item name="android:textColor">@color/White</item>
     </style>

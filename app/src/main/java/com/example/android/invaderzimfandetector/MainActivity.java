@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //*** Question 7 - Zim's horrible career day - radio buttons***
+       //*** Question 7 - Zim's horrible career day - radio buttons***
     public void onRadioButton4Clicked(View view) {
         // Is the Q7 button now checked?
         boolean button4Checked = ((RadioButton) view).isChecked();
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayScore(View view) {
         EditText userName = (EditText) findViewById(R.id.userName);
         String name = userName.getText().toString();
-        if (totalScore >= 7) {
+        if (totalScore >= 8) {
             Toast.makeText(this, "Congratulations " + name + ", I'll let you live... FOR NOW!", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Stupid " + name + ", you must now suffer my wrath of DOOM!", Toast.LENGTH_LONG).show();

@@ -39,6 +39,9 @@
     <string name="Q7_Answer1">Burger Slave</string>
     <string name="Q7_Answer2">McBunsALot</string>
     <string name="Q7_Answer3">McMeaties</string>
+    <!--Question 8-->
+    <string name="Question8">8. How many Irkens have been dubbed the \"Almighty Tallest\"?</string>
+    <string name="Answer8Hint">I doubt you know!</string>
 
     <!--Submit Button-->
     <string name="SubmitButton">Ready For Doom?</string>
