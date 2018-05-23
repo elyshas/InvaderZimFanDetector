@@ -10,11 +10,17 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //***Calculates final score***
+    //***Calculate final score***
     int totalScore;
 
     //***+1 for correct answers***
-    private static final int CorrectAnswer = 1;
+    private static final int correctAnswer = 1;
+
+    //***RadioButton Groups***
+    private boolean question1AlreadyAnsweredCorrectly = false;
+    private boolean question3AlreadyAnsweredCorrectly = false;
+    private boolean question5AlreadyAnsweredCorrectly = false;
+    private boolean question7AlreadyAnsweredCorrectly = false;
 
     //***Saving score for rotation***
     static final String GAME_SCORE = "gameScore";
@@ -35,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Calling on the label and adding the int value for user answers (which was created at the top).
 
     //*** Saving instance for when rotating between portrait and landscape***
     @Override
@@ -52,14 +57,21 @@ public class MainActivity extends AppCompatActivity {
         // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q1a1:
-                if (button1Checked)
-                    // Puffer fish and gnomes
-                    totalScore += CorrectAnswer;
+                if (button1Checked && !question1AlreadyAnsweredCorrectly) {
+                    // CORRECT - Puffer fish and gnomes
+                    totalScore += correctAnswer;
+                    question1AlreadyAnsweredCorrectly = true;
+                }
                 break;
             case R.id.q1a2:
-                if (button1Checked)
+                if (button1Checked && question1AlreadyAnsweredCorrectly) {
                     // Squirrels and gnomes
-                    break;
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question1AlreadyAnsweredCorrectly = false;
+                }
+                break;
         }
     }
 
@@ -67,27 +79,31 @@ public class MainActivity extends AppCompatActivity {
     public void onCheckboxes1Checked(View view) {
         // Is the Q2 checkboxes checked?
         boolean checkboxes1Checked = ((CheckBox) view).isChecked();
-        // Check which boxes are checked and add points when appropriate
+        // Check which button is checked and add/subtract points when appropriate
         switch (view.getId()) {
             case R.id.q2a1:
-                if (checkboxes1Checked)
+                if (checkboxes1Checked) {
                     // pizza
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
             case R.id.q2a2:
-                if (checkboxes1Checked)
+                if (checkboxes1Checked) {
                     // waffles
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
             case R.id.q2a3:
-                if (checkboxes1Checked)
-                    // peanuts
-                    totalScore -= CorrectAnswer;
+                if (checkboxes1Checked) {
+                    // INCORRECT - peanuts
+                    totalScore -= correctAnswer;
+                }
                     break;
             case R.id.q2a4:
-                if (checkboxes1Checked)
+                if (checkboxes1Checked) {
                     // tacos
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
         }
     }
@@ -96,21 +112,32 @@ public class MainActivity extends AppCompatActivity {
     public void onRadioButton2Clicked(View view) {
         // Is the Q3 button now checked?
         boolean button2Checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which button is checked and add/subtract points when appropriate
         switch (view.getId()) {
             case R.id.q3a1:
-                if (button2Checked)
+                if (button2Checked && question3AlreadyAnsweredCorrectly)
                     // Larry
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question3AlreadyAnsweredCorrectly = false;
                     break;
             case R.id.q3a2:
-                if (button2Checked)
-                    // Keef
-                    totalScore += CorrectAnswer;
+                if (button2Checked && !question3AlreadyAnsweredCorrectly) {
+                    // CORRECT - Keef
+                    totalScore += correctAnswer;
+                    question3AlreadyAnsweredCorrectly = true;
+                }
                 break;
             case R.id.q3a3:
-                if (button2Checked)
+                if (button2Checked && question3AlreadyAnsweredCorrectly) {
                     // Garry
-                    break;
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question3AlreadyAnsweredCorrectly = false;
+                }
+                break;
         }
     }
 
@@ -121,19 +148,22 @@ public class MainActivity extends AppCompatActivity {
         // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q4a1:
-                if (checkboxes2Checked)
+                if (checkboxes2Checked) {
                     // Video Games
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
             case R.id.q4a2:
-                if (checkboxes2Checked)
-                    // Building robots
-                    totalScore -= CorrectAnswer;
-                    break;
+                if (checkboxes2Checked) {
+                    // INCORRECT - Building robots
+                    totalScore -= correctAnswer;
+                }
+                break;
             case R.id.q4a3:
-                if (checkboxes2Checked)
+                if (checkboxes2Checked) {
                     // Insulting Dib
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
         }
     }
@@ -142,21 +172,33 @@ public class MainActivity extends AppCompatActivity {
     public void onRadioButton3Clicked(View view) {
         // Is the Q1 button now checked?
         boolean button3Checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which button is checked and add/subtract points when appropriate
         switch (view.getId()) {
             case R.id.q5a1:
-                if (button3Checked)
+                if (button3Checked && question5AlreadyAnsweredCorrectly) {
                     // Walton Chunky
-                    break;
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question3AlreadyAnsweredCorrectly = false;
+                }
+                break;
             case R.id.q5a2:
-                if (button3Checked)
-                    // Pustulio
-                    totalScore += CorrectAnswer;
+                if (button3Checked && !question5AlreadyAnsweredCorrectly) {
+                    // CORRECT - Pustulio
+                    totalScore += correctAnswer;
+                    question5AlreadyAnsweredCorrectly = true;
+                }
                 break;
             case R.id.q5a3:
-                if (button3Checked)
-                    // Zitboy
-                    break;
+                if (button3Checked && question5AlreadyAnsweredCorrectly) {
+                    // Walton Chunky
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question3AlreadyAnsweredCorrectly = false;
+                }
+                break;
         }
     }
 
@@ -167,19 +209,22 @@ public class MainActivity extends AppCompatActivity {
         // Check which boxes are checked and add points when appropriate
         switch (view.getId()) {
             case R.id.q6a1:
-                if (checkboxes3Checked)
-                    // Squirrel Antics
-                    totalScore -= CorrectAnswer;
-                    break;
+                if (checkboxes3Checked) {
+                    // INCORRECT - Squirrel Antics
+                    totalScore -= correctAnswer;
+                }
+                break;
             case R.id.q6a2:
-                if (checkboxes3Checked)
+                if (checkboxes3Checked) {
                     // The Doom Song
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
             case R.id.q6a3:
-                if (checkboxes3Checked)
+                if (checkboxes3Checked) {
                     // Merry Jingly
-                    totalScore += CorrectAnswer;
+                    totalScore += correctAnswer;
+                }
                 break;
         }
     }
@@ -188,26 +233,38 @@ public class MainActivity extends AppCompatActivity {
     public void onRadioButton4Clicked(View view) {
         // Is the Q7 button now checked?
         boolean button4Checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which button is checked and add/subtract points when appropriate
         switch (view.getId()) {
             case R.id.q7a1:
-                if (button4Checked)
-                    // Burger Slave
-                    break;
+                if (button4Checked && question7AlreadyAnsweredCorrectly) {
+                    // Walton Chunky
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question7AlreadyAnsweredCorrectly = false;
+                }
+                break;
             case R.id.q7a2:
-                if (button4Checked)
-                    // McBunsALot
-                    break;
+                if (button4Checked && question7AlreadyAnsweredCorrectly) {
+                    // Walton Chunky
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
+                    question7AlreadyAnsweredCorrectly = false;
+                }
+                break;
             case R.id.q7a3:
-                if (button4Checked)
-                    // McMeaties
-                    totalScore += CorrectAnswer;
+                if (button4Checked && !question7AlreadyAnsweredCorrectly) {
+                    // CORRECT - Pustulio
+                    totalScore += correctAnswer;
+                    question7AlreadyAnsweredCorrectly = true;
+                }
                 break;
         }
     }
 
 //    //*** Question 8 - Irken Rulers - EditText question***
-//    public void answer8Completed (View view) {
+
 //        // Is the Q8 answered?
 //
 //        // Check answer
@@ -282,6 +339,8 @@ public class MainActivity extends AppCompatActivity {
         checkBox9.setChecked(false);
         CheckBox checkBox10 = (CheckBox) findViewById(R.id.q6a3);
         checkBox10.setChecked(false);
+        //Reset QUESTION 8 EditText
+//        answer8.setText("");
 
         //Resetting EditText
         userName.setText("");

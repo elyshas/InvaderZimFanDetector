@@ -9,6 +9,7 @@
     tools:context="com.example.android.invaderzimfandetector.MainActivity">
 
     <LinearLayout
+        android:id="@+id/TopApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

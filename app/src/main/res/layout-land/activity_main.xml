@@ -51,6 +51,7 @@
 
         <!--FIRST QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
+            android:id="@+id/radioGroupQuestion1"
             style="@style/RadioGroup"
             android:layout_marginLeft="@dimen/Q1_Margins_Land"
             android:layout_marginRight="@dimen/Q1_Margins_Land">
