@@ -4,6 +4,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollViewID"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.invaderzimfandetector.MainActivity">
@@ -11,8 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:focusableInTouchMode="true" >
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
         <!--INITIAL IMAGE AND TEXT-->
         <ImageView
@@ -30,8 +31,8 @@
             android:id="@+id/userName"
             style="@style/NameField"
             android:hint="@string/EditTextHint"
-            android:inputType="textCapWords"
-            android:imeOptions="actionDone" />
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords" />
 
         <!--1. DIVIDER LINE AND RELEVANT CIRCULAR IMAGE ABOVE EACH QUESTION-->
         <View style="@style/DividerLine" />
@@ -51,6 +52,7 @@
 
         <!--FIRST QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
+            android:id="@+id/radioGroup1"
             style="@style/RadioGroup"
             android:layout_marginLeft="@dimen/Q1_Margins_Land"
             android:layout_marginRight="@dimen/Q1_Margins_Land">
@@ -59,14 +61,12 @@
                 android:id="@+id/q1a1"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton1Clicked"
                 android:text="@string/Q1_Answer1" />
 
             <RadioButton
                 android:id="@+id/q1a2"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton1Clicked"
                 android:text="@string/Q1_Answer2" />
         </RadioGroup>
 
@@ -98,28 +98,24 @@
                 android:id="@+id/q2a1"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer1" />
 
             <CheckBox
                 android:id="@+id/q2a2"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer2" />
 
             <CheckBox
                 android:id="@+id/q2a3"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer3" />
 
             <CheckBox
                 android:id="@+id/q2a4"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes1Checked"
                 android:text="@string/Q2_Answer4" />
 
         </LinearLayout>
@@ -142,6 +138,7 @@
 
         <!--THIRD QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
+            android:id="@+id/radioGroup2"
             style="@style/RadioGroup"
             android:layout_marginLeft="@dimen/Q3_Margins_Land"
             android:layout_marginRight="@dimen/Q3_Margins_Land">
@@ -150,21 +147,18 @@
                 android:id="@+id/q3a1"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton2Clicked"
                 android:text="@string/Q3_Answer1" />
 
             <RadioButton
                 android:id="@+id/q3a2"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton2Clicked"
                 android:text="@string/Q3_Answer2" />
 
             <RadioButton
                 android:id="@+id/q3a3"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton2Clicked"
                 android:text="@string/Q3_Answer3" />
 
         </RadioGroup>
@@ -197,21 +191,18 @@
                 android:id="@+id/q4a1"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes2Checked"
                 android:text="@string/Q4_Answer1" />
 
             <CheckBox
                 android:id="@+id/q4a2"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes2Checked"
                 android:text="@string/Q4_Answer2" />
 
             <CheckBox
                 android:id="@+id/q4a3"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes2Checked"
                 android:text="@string/Q4_Answer3" />
 
         </LinearLayout>
@@ -234,6 +225,7 @@
 
         <!--FIFTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
+            android:id="@+id/radioGroup3"
             style="@style/RadioGroup"
             android:layout_marginLeft="@dimen/Q5_Margins_Land"
             android:layout_marginRight="@dimen/Q5_Margins_Land">
@@ -242,21 +234,18 @@
                 android:id="@+id/q5a1"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton3Clicked"
                 android:text="@string/Q5_Answer1" />
 
             <RadioButton
                 android:id="@+id/q5a2"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton3Clicked"
                 android:text="@string/Q5_Answer2" />
 
             <RadioButton
                 android:id="@+id/q5a3"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton3Clicked"
                 android:text="@string/Q5_Answer3" />
         </RadioGroup>
 
@@ -288,21 +277,18 @@
                 android:id="@+id/q6a1"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes3Checked"
                 android:text="@string/Q6_Answer1" />
 
             <CheckBox
                 android:id="@+id/q6a2"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes3Checked"
                 android:text="@string/Q6_Answer2" />
 
             <CheckBox
                 android:id="@+id/q6a3"
                 style="@style/Checkboxes"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onCheckboxes3Checked"
                 android:text="@string/Q6_Answer3" />
 
         </LinearLayout>
@@ -325,6 +311,7 @@
 
         <!--SEVENTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
+            android:id="@+id/radioGroup4"
             style="@style/RadioGroup"
             android:layout_marginLeft="@dimen/Q7_Margins_Land"
             android:layout_marginRight="@dimen/Q7_Margins_Land">
@@ -333,21 +320,18 @@
                 android:id="@+id/q7a1"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton4Clicked"
                 android:text="@string/Q7_Answer1" />
 
             <RadioButton
                 android:id="@+id/q7a2"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton4Clicked"
                 android:text="@string/Q7_Answer2" />
 
             <RadioButton
                 android:id="@+id/q7a3"
                 style="@style/RadioButtons"
                 android:buttonTint="@color/BrightGreen"
-                android:onClick="onRadioButton4Clicked"
                 android:text="@string/Q7_Answer3" />
 
         </RadioGroup>
@@ -373,8 +357,8 @@
             android:id="@+id/answer8"
             style="@style/EditTextField"
             android:hint="@string/Answer8Hint"
-            android:inputType="number"
-            android:imeOptions="actionDone" />
+            android:imeOptions="actionDone"
+            android:inputType="number" />
 
         <!--PADDING BETWEEN QUESTION AND BUTTON-->
         <View style="@style/DividerLine" />
@@ -383,7 +367,7 @@
         <Button
             style="@style/SubmitButton"
             android:background="@drawable/button1_click"
-            android:onClick="displayScore"
+            android:onClick="calculateAndDisplayScore"
             android:text="@string/SubmitButton" />
 
     </LinearLayout>

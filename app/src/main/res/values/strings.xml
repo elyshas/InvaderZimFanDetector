@@ -2,7 +2,7 @@
     <!--App Name and Intro Text-->
     <string name="app_name">Invader Zim Fan Detector</string>
     <string name="Intro">Take my quiz or feel my wrath!</string>
-    <string name="EditTextHint">Your First Name</string>
+    <string name="EditTextHint">Your Stinky Name</string>
 
     <!--Question 1-->
     <string name="Question1">1. What items guard Zim\'s front yard?</string>
@@ -15,7 +15,7 @@
     <string name="Q2_Answer3">Peanuts</string>
     <string name="Q2_Answer4">Tacos</string>
     <!--Question 3-->
-    <string name="Question3">3. What is the name of Zim\'s fake bestfriend?</string>
+    <string name="Question3">3. What is the name of Zim\'s fake best friend?</string>
     <string name="Q3_Answer1">Larry</string>
     <string name="Q3_Answer2">Keef</string>
     <string name="Q3_Answer3">Garry</string>
@@ -41,7 +41,7 @@
     <string name="Q7_Answer3">McMeaties</string>
     <!--Question 8-->
     <string name="Question8">8. How many Irkens have been dubbed the \"Almighty Tallest\"?</string>
-    <string name="Answer8Hint">I doubt you know!</string>
+    <string name="Answer8Hint">You know nothing!</string>
 
     <!--Submit Button-->
     <string name="SubmitButton">Ready For Doom?</string>
