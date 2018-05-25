@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             totalScore = 0;
         }
-
     }
-
 
     //*** Saving instance for when rotating between portrait and landscape***
     @Override
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     question1AlreadyAnsweredCorrectly = false;
                 }
                 break;
-        }
+        } System.out.println("Score after question 1: " + totalScore);
     }
 
     //*** Question 2 - GIR favorite food - checkboxes***
@@ -89,23 +89,25 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.q2a2:
                 if (checkboxes1Checked) {
-                    // waffles
+                    // Waffles
                     totalScore += correctAnswer;
                 }
                 break;
             case R.id.q2a3:
                 if (checkboxes1Checked) {
                     // INCORRECT - peanuts
-                    totalScore -= correctAnswer;
+                    if (totalScore > 0) {
+                        totalScore -= correctAnswer;
+                    }
                 }
-                    break;
+                break;
             case R.id.q2a4:
                 if (checkboxes1Checked) {
-                    // tacos
+                    // Waffles
                     totalScore += correctAnswer;
                 }
                 break;
-        }
+        } System.out.println("Score after question 2: " + totalScore);
     }
 
     //*** Question 3 - Zim's fake best friend - radio buttons***
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     question3AlreadyAnsweredCorrectly = false;
                 }
                 break;
-        }
+        } System.out.println("Score after question 3: " + totalScore);
     }
 
     //*** Question 4 - Gaz's favorite things - checkboxes***
@@ -155,8 +157,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.q4a2:
                 if (checkboxes2Checked) {
-                    // INCORRECT - Building robots
-                    totalScore -= correctAnswer;
+                    if (totalScore > 0) {
+                        // INCORRECT - Building robots
+                        totalScore -= correctAnswer;
+                    }
                 }
                 break;
             case R.id.q4a3:
@@ -165,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     totalScore += correctAnswer;
                 }
                 break;
-        }
+        } System.out.println("Score after question 4: " + totalScore);
     }
 
     //*** Question 5 - Name of Zim's zit - radio buttons***
@@ -199,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     question3AlreadyAnsweredCorrectly = false;
                 }
                 break;
-        }
+        } System.out.println("Score after question 5: " + totalScore);
     }
 
     //*** Question 6 - GIR's best songs - checkboxes***
@@ -210,26 +214,28 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.q6a1:
                 if (checkboxes3Checked) {
-                    // INCORRECT - Squirrel Antics
-                    totalScore -= correctAnswer;
+                    if (totalScore > 0) {
+                        // INCORRECT - Squirrelzee
+                        totalScore -= correctAnswer;
+                    }
                 }
                 break;
             case R.id.q6a2:
-                if (checkboxes3Checked) {
-                    // The Doom Song
-                    totalScore += correctAnswer;
-                }
-                break;
-            case R.id.q6a3:
                 if (checkboxes3Checked) {
                     // Merry Jingly
                     totalScore += correctAnswer;
                 }
                 break;
-        }
+            case R.id.q6a3:
+                if (checkboxes3Checked) {
+                    // The Doom Song
+                    totalScore += correctAnswer;
+                }
+                break;
+        } System.out.println("Score after question 6: " + totalScore);
     }
 
-       //*** Question 7 - Zim's horrible career day - radio buttons***
+    //*** Question 7 - Zim's horrible career day - radio buttons***
     public void onRadioButton4Clicked(View view) {
         // Is the Q7 button now checked?
         boolean button4Checked = ((RadioButton) view).isChecked();
@@ -260,23 +266,28 @@ public class MainActivity extends AppCompatActivity {
                     question7AlreadyAnsweredCorrectly = true;
                 }
                 break;
-        }
+        } System.out.println("Score after question 7: " + totalScore);
     }
 
-//    //*** Question 8 - Irken Rulers - EditText question***
+    //*** Question 8 - Irken Rulers - EditText question***
+    public void storeEighthAnswer() {
+        EditText answer8 = findViewById(R.id.answer8);
+        String answerNumber8 = answer8.getText().toString();
+        // Is the Q8 answered?
 
-//        // Is the Q8 answered?
-//
-//        // Check answer
-//
-//        // correct answer
-//
-//        //incorrect answer (if needed)
-//    }
+      // Check answer & add +1 if correct
+        if (answerNumber8.equals("2")) {
+            totalScore += correctAnswer;
+        }
+        System.out.println("Score after question 8: " + totalScore);
+    }
 
     //***Calculate user total score and display proper response based on their score***
     public void displayScore(View view) {
-        EditText userName = (EditText) findViewById(R.id.userName);
+        //including eighth answer when submit is pushed
+        storeEighthAnswer();
+
+        EditText userName = findViewById(R.id.userName);
         String name = userName.getText().toString();
         if (totalScore >= 9) {
             Toast.makeText(this, "Congratulations " + name + ", I'll let you live... FOR NOW!", Toast.LENGTH_LONG).show();
@@ -287,66 +298,63 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //***Resetting all quiz questions after submit button is selected***
-        //Resetting RadioButtons
-        //QUESTION 1
-        RadioButton radioButton1 = (RadioButton) findViewById(R.id.q1a1);
-        radioButton1.setChecked(false);
-        RadioButton radioButton2 = (RadioButton) findViewById(R.id.q1a2);
-        radioButton2.setChecked(false);
-        //QUESTION 3
-        RadioButton radioButton3 = (RadioButton) findViewById(R.id.q3a1);
-        radioButton3.setChecked(false);
-        RadioButton radioButton4 = (RadioButton) findViewById(R.id.q3a2);
-        radioButton4.setChecked(false);
-        RadioButton radioButton5 = (RadioButton) findViewById(R.id.q3a3);
-        radioButton5.setChecked(false);
-        //QUESTION 5
-        RadioButton radioButton6 = (RadioButton) findViewById(R.id.q5a1);
-        radioButton6.setChecked(false);
-        RadioButton radioButton7 = (RadioButton) findViewById(R.id.q5a2);
-        radioButton7.setChecked(false);
-        RadioButton radioButton8 = (RadioButton) findViewById(R.id.q5a3);
-        radioButton8.setChecked(false);
-        //QUESTION 7
-        RadioButton radioButton9 = (RadioButton) findViewById(R.id.q7a1);
-        radioButton9.setChecked(false);
-        RadioButton radioButton10 = (RadioButton) findViewById(R.id.q7a2);
-        radioButton10.setChecked(false);
-        RadioButton radioButton11 = (RadioButton) findViewById(R.id.q7a3);
-        radioButton11.setChecked(false);
+
+        //Resetting all RadioGroups
+        //QUESTION 1 - First RB
+        RadioGroup radioGroup1 = findViewById(R.id.radioGroup1);
+        radioGroup1.clearCheck();
+        //QUESTION 3 - Second RB
+        RadioGroup radioGroup2 = findViewById(R.id.radioGroup2);
+        radioGroup2.clearCheck();
+        //QUESTION 5 - Third RB
+        RadioGroup radioGroup3 = findViewById(R.id.radioGroup3);
+        radioGroup3.clearCheck();
+        //QUESTION 7 - Fourth RB
+        RadioGroup radioGroup4 = findViewById(R.id.radioGroup4);
+        radioGroup4.clearCheck();
+
+        //Resetting RadioButton booleans
+        question1AlreadyAnsweredCorrectly = false;
+        question3AlreadyAnsweredCorrectly = false;
+        question5AlreadyAnsweredCorrectly = false;
+        question7AlreadyAnsweredCorrectly = false;
 
         //Resetting CheckBoxes
         //QUESTION 2
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.q2a1);
+        CheckBox checkBox1 = findViewById(R.id.q2a1);
         checkBox1.setChecked(false);
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.q2a2);
+        CheckBox checkBox2 = findViewById(R.id.q2a2);
         checkBox2.setChecked(false);
-        CheckBox checkBox3 = (CheckBox) findViewById(R.id.q2a3);
+        CheckBox checkBox3 = findViewById(R.id.q2a3);
         checkBox3.setChecked(false);
-        CheckBox checkBox4 = (CheckBox) findViewById(R.id.q2a4);
+        CheckBox checkBox4 = findViewById(R.id.q2a4);
         checkBox4.setChecked(false);
         //QUESTION 4
-        CheckBox checkBox5 = (CheckBox) findViewById(R.id.q4a1);
+        CheckBox checkBox5 = findViewById(R.id.q4a1);
         checkBox5.setChecked(false);
-        CheckBox checkBox6 = (CheckBox) findViewById(R.id.q4a2);
+        CheckBox checkBox6 = findViewById(R.id.q4a2);
         checkBox6.setChecked(false);
-        CheckBox checkBox7 = (CheckBox) findViewById(R.id.q4a3);
+        CheckBox checkBox7 = findViewById(R.id.q4a3);
         checkBox7.setChecked(false);
         //QUESTION 6
-        CheckBox checkBox8 = (CheckBox) findViewById(R.id.q6a1);
+        CheckBox checkBox8 = findViewById(R.id.q6a1);
         checkBox8.setChecked(false);
-        CheckBox checkBox9 = (CheckBox) findViewById(R.id.q6a2);
+        CheckBox checkBox9 = findViewById(R.id.q6a2);
         checkBox9.setChecked(false);
-        CheckBox checkBox10 = (CheckBox) findViewById(R.id.q6a3);
+        CheckBox checkBox10 = findViewById(R.id.q6a3);
         checkBox10.setChecked(false);
         //Reset QUESTION 8 EditText
-//        answer8.setText("");
+        EditText answer8 = findViewById(R.id.answer8);
+        answer8.setText("");
 
         //Resetting EditText
         userName.setText("");
 
         //Resetting quiz score
         totalScore = 0;
+
+        ScrollView mainScrollView = findViewById(R.id.ScrollViewID);
+        mainScrollView.fullScroll(ScrollView.FOCUS_UP);
     }
 
 }

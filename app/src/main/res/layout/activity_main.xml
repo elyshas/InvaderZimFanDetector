@@ -6,10 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/ScrollViewID"
     tools:context="com.example.android.invaderzimfandetector.MainActivity">
 
     <LinearLayout
-        android:id="@+id/TopApp"
+        android:id="@+id/TopLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -53,6 +54,7 @@
         <!--FIRST QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
+            android:id="@+id/radioGroup1"
             android:layout_marginLeft="@dimen/Q1_L_Margin"
             android:layout_marginRight="@dimen/Q1_R_Margin">
 
@@ -144,6 +146,7 @@
         <!--THIRD QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
+            android:id="@+id/radioGroup2"
             android:layout_marginLeft="@dimen/Q3_L_Margin"
             android:layout_marginRight="@dimen/Q3_R_Margin">
 
@@ -235,6 +238,7 @@
         <!--FIFTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
+            android:id="@+id/radioGroup3"
             android:layout_marginLeft="@dimen/Q5_L_Margin"
             android:layout_marginRight="@dimen/Q5_R_Margin">
 
@@ -326,6 +330,7 @@
         <!--SEVENTH QUESTION'S ANSWER OPTIONS-->
         <RadioGroup
             style="@style/RadioGroup"
+            android:id="@+id/radioGroup4"
             android:layout_marginLeft="@dimen/Q7_L_Margin"
             android:layout_marginRight="@dimen/Q7_R_Margin">
 
