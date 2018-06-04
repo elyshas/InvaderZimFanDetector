@@ -9,8 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.List;
+
 
 // TODO - assign Views to constants instead of multiple calls to findViewById()
 // TODO - implement logging
