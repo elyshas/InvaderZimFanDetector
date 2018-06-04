@@ -48,222 +48,99 @@ public class MainActivity extends AppCompatActivity {
 
     //*** Question 1 - Zim's house decor - radio buttons***
     public void calculateQuestion1() {
-        // Populating list of RadioButton ID's for Question 1
-        List<Integer> question1RadioButtonIdList = new ArrayList<>();
-        question1RadioButtonIdList.add(R.id.q1a1);
-        question1RadioButtonIdList.add(R.id.q1a2);
-
-        // Iterate through list and check if answer is correct/incorrect for each radio button in list
-        for (int currentRadioButtonId : question1RadioButtonIdList) {
-            switch (currentRadioButtonId) {
-                case R.id.q1a1:
-                    if (((RadioButton) findViewById(R.id.q1a1)).isChecked()) {
-                        // CORRECT - Puffer fish and gnomes
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q1a2:
-                    if (((RadioButton) findViewById(R.id.q1a2)).isChecked()) {
-                        // INCORRECT (no point added) - Squirrels and gnomes
-                    }
-                    break;
-            }
+         if (
+                // CORRECT - Puffer fish and gnomes
+                ((RadioButton) findViewById(R.id.q1a1)).isChecked()
+                // INCORRECT - Squirrels and gnomes
+                && !((RadioButton) findViewById(R.id.q1a2)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 2 - GIR favorite food - checkboxes***
     public void calculateQuestion2() {
-        // Populating list of checkbox ID's for Question 2
-        List<Integer> question2CheckboxIdList = new ArrayList<>();
-        question2CheckboxIdList.add(R.id.q2a1);
-        question2CheckboxIdList.add(R.id.q2a2);
-        question2CheckboxIdList.add(R.id.q2a3);
-        question2CheckboxIdList.add(R.id.q2a4);
-
-        // Iterate through list and check if answer is correct/incorrect for each checkbox in list
-        for (int currentCheckboxId : question2CheckboxIdList) {
-            switch (currentCheckboxId) {
-                case R.id.q2a1:
-                    if (((CheckBox) findViewById(R.id.q2a1)).isChecked()) {
-                        // CORRECT - Pizza
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q2a2:
-                    if (((CheckBox) findViewById(R.id.q2a2)).isChecked()) {
-                        // CORRECT - Waffles
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q2a3:
-                    if (((CheckBox) findViewById(R.id.q2a3)).isChecked()) {
-                        // INCORRECT (no point added) - peanuts
-                    }
-                    break;
-                case R.id.q2a4:
-                    if (((CheckBox) findViewById(R.id.q2a4)).isChecked()) {
-                        // CORRECT - Tacos
-                        totalScore += correctAnswer;
-                    }
-                    break;
-            }
+        if (
+                // CORRECT - Pizza
+                ((CheckBox) findViewById(R.id.q2a1)).isChecked()
+                // CORRECT - Waffles
+                && ((CheckBox) findViewById(R.id.q2a2)).isChecked()
+                // INCORRECT - peanuts
+                && !((CheckBox) findViewById(R.id.q2a3)).isChecked()
+                // CORRECT - Tacos
+                && ((CheckBox) findViewById(R.id.q2a4)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 3 - Zim's fake best friend - radio buttons***
     public void calculateQuestion3() {
-        // Populating list of RadioButton ID's for Question 3
-        List<Integer> question3RadioButtonIdList = new ArrayList<>();
-        question3RadioButtonIdList.add(R.id.q3a1);
-        question3RadioButtonIdList.add(R.id.q3a2);
-        question3RadioButtonIdList.add(R.id.q3a3);
-
-        // Iterate through list and check if answer is correct/incorrect for each radiobutton in list
-        for (int currentRadioButtonId : question3RadioButtonIdList) {
-            switch (currentRadioButtonId) {
-                case R.id.q3a1:
-                    if (((RadioButton) findViewById(R.id.q3a1)).isChecked()) {
-                        // INCORRECT (no point added) - Larry
-                    }
-                    break;
-                case R.id.q3a2:
-                    if (((RadioButton) findViewById(R.id.q3a2)).isChecked()) {
-                        // CORRECT - Keef
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q3a3:
-                    if (((RadioButton) findViewById(R.id.q3a3)).isChecked()) {
-                        // INCORRECT (no point added) - Garry
-                    }
-                    break;
-            }
+        if (
+                // INCORRECT - Larry
+                !((RadioButton) findViewById(R.id.q3a1)).isChecked()
+                // CORRECT - Keef
+                && ((RadioButton) findViewById(R.id.q3a2)).isChecked()
+                // INCORRECT - Garry
+                && !((RadioButton) findViewById(R.id.q3a3)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 4 - Gaz's favorite things - checkboxes***
     public void calculateQuestion4() {
-        // Populating list of checkbox ID's for Question 4
-        List<Integer> question4CheckboxIdList = new ArrayList<>();
-        question4CheckboxIdList.add(R.id.q4a1);
-        question4CheckboxIdList.add(R.id.q4a2);
-        question4CheckboxIdList.add(R.id.q4a3);
-
-        // Iterate through list and check if answer is correct/incorrect for each checkbox in list
-        for (int currentCheckboxId : question4CheckboxIdList) {
-            switch (currentCheckboxId) {
-                case R.id.q4a1:
-                    if (((CheckBox) findViewById(R.id.q4a1)).isChecked()) {
-                        // CORRECT - Video Games
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q4a2:
-                    if (((CheckBox) findViewById(R.id.q4a2)).isChecked()) {
-                        // INCORRECT (no point added) - Building robots
-                    }
-                    break;
-                case R.id.q4a3:
-                    if (((CheckBox) findViewById(R.id.q4a3)).isChecked()) {
-                        // CORRECT - Insulting Dib
-                        totalScore += correctAnswer;
-                    }
-                    break;
-            }
+        if (
+                // CORRECT - Video Games
+                ((CheckBox) findViewById(R.id.q4a1)).isChecked()
+                // INCORRECT - Building robots
+                && !((CheckBox) findViewById(R.id.q4a2)).isChecked()
+                // CORRECT - Insulting Dib
+                && ((CheckBox) findViewById(R.id.q4a3)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 5 - Name of Zim's zit - radio buttons***
     public void calculateQuestion5() {
-        // Populating list of RadioButton ID's for Question 5
-        List<Integer> question5RadioButtonIdList = new ArrayList<>();
-        question5RadioButtonIdList.add(R.id.q5a1);
-        question5RadioButtonIdList.add(R.id.q5a2);
-        question5RadioButtonIdList.add(R.id.q5a3);
-
-        // Iterate through list and check if answer is correct/incorrect for each radiobutton in list
-        for (int currentRadioButtonId : question5RadioButtonIdList) {
-            switch (currentRadioButtonId) {
-                case R.id.q5a1:
-                    if (((RadioButton) findViewById(R.id.q5a1)).isChecked()) {
-                        // INCORRECT (no point added) - Walton Chunky
-                    }
-                    break;
-                case R.id.q5a2:
-                    if (((RadioButton) findViewById(R.id.q5a2)).isChecked()) {
-                        // CORRECT - Pustulio
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q5a3:
-                    if (((RadioButton) findViewById(R.id.q5a3)).isChecked()) {
-                        // INCORRECT (no point added) - Walton Chunky
-                    }
-                    break;
-            }
+        if (
+                // INCORRECT - Walton Chunky
+                !((RadioButton) findViewById(R.id.q5a1)).isChecked()
+                // CORRECT - Pustulio
+                && ((RadioButton) findViewById(R.id.q5a2)).isChecked()
+                // INCORRECT - Zitboy
+                && !((RadioButton) findViewById(R.id.q5a3)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 6 - GIR's best songs - checkboxes***
     public void calculateQuestion6() {
-        // Populating list of checkbox ID's for Question 6
-        List<Integer> question6CheckboxIdList = new ArrayList<>();
-        question6CheckboxIdList.add(R.id.q6a1);
-        question6CheckboxIdList.add(R.id.q6a2);
-        question6CheckboxIdList.add(R.id.q6a3);
-
-        // Iterate through list and check if answer is correct/incorrect for each checkbox in list
-        for (int currentCheckboxId : question6CheckboxIdList) {
-            switch (currentCheckboxId) {
-                case R.id.q6a1:
-                    if (((CheckBox) findViewById(R.id.q6a1)).isChecked()) {
-                        // INCORRECT (no point added) - Squirrelzee
-                    }
-                    break;
-                case R.id.q6a2:
-                    if (((CheckBox) findViewById(R.id.q6a2)).isChecked()) {
-                        // CORRECT - Merry Jingly
-                        totalScore += correctAnswer;
-                    }
-                    break;
-                case R.id.q6a3:
-                    if (((CheckBox) findViewById(R.id.q6a3)).isChecked()) {
-                        // CORRECT - The Doom Song
-                        totalScore += correctAnswer;
-                    }
-                    break;
-            }
+        if (
+                // INCORRECT - Squirrelzee
+                !((CheckBox) findViewById(R.id.q6a1)).isChecked()
+                // CORRECT - Merry Jingly
+                && ((CheckBox) findViewById(R.id.q6a2)).isChecked()
+                // CORRECT - The Doom Song
+                && ((CheckBox) findViewById(R.id.q6a3)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
     //*** Question 7 - Zim's horrible career day - radio buttons***
     public void calculateQuestion7() {
-        // Populating list of RadioButton ID's for Question 7
-        List<Integer> question7RadioButtonIdList = new ArrayList<>();
-        question7RadioButtonIdList.add(R.id.q7a1);
-        question7RadioButtonIdList.add(R.id.q7a2);
-        question7RadioButtonIdList.add(R.id.q7a3);
-
-        // Iterate through list and check if answer is correct/incorrect for each radiobutton in list
-        for (int currentRadioButtonId : question7RadioButtonIdList) {
-            switch (currentRadioButtonId) {
-                case R.id.q7a1:
-                    if (((RadioButton) findViewById(R.id.q7a1)).isChecked()) {
-                        // INCORRECT (no point added) - Burger Slave
-                    }
-                    break;
-                case R.id.q7a2:
-                    if (((RadioButton) findViewById(R.id.q7a2)).isChecked()) {
-                        // INCORRECT (no point added) - McBunsALot
-                    }
-                    break;
-                case R.id.q7a3:
-                    if (((RadioButton) findViewById(R.id.q7a3)).isChecked()) {
-                        // CORRECT - McMeaties
-                        totalScore += correctAnswer;
-                    }
-                    break;
-            }
+        if (
+                // INCORRECT - Burger Slave
+                !((RadioButton) findViewById(R.id.q7a1)).isChecked()
+                // INCORRECT - McBunsALot
+                && !((RadioButton) findViewById(R.id.q7a2)).isChecked()
+                // CORRECT - McMeaties
+                && ((RadioButton) findViewById(R.id.q7a3)).isChecked()
+            ) {
+            totalScore += correctAnswer;
         }
     }
 
@@ -303,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayScore(EditText userName) {
         String name = userName.getText().toString();
         // TODO - convert to using StringBuilder
-        if (totalScore >= 9) {
+        if (totalScore >= 5) {
             Toast.makeText(this, "Congratulations " + name
                     + ", I'll let you live... FOR NOW!", Toast.LENGTH_LONG).show();
             Toast.makeText(this, "Your acceptable score was: "
